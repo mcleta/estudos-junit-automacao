@@ -10,14 +10,20 @@ public class PageFCompras extends AttributesFCompra implements Utils{
         click(linkDoItem());
         click(btnAddCarrinho());
         assertElementText(
-                By.xpath("//button[@class='btn_secondary btn_inventory']"),
+                btnAddPraRemoverCarrinho(),
                 "REMOVE",
                 "Verificação de mudança do texto do botão para REMOVE"
                 );
+        assertElementInsideElementDisplayed(
+                By.cssSelector("div#shopping_cart_container"),
+                By.cssSelector("a>span.fa-layers-counter"),
+                "Verificação de visibilidade do contador no icone de carrinho",
+                10
+        );
     }
 
     public void entrarCarrinhoDeCompras(){
-
+        click(iconCarrinho());
     }
 
     public void carrinhoCheckout(){

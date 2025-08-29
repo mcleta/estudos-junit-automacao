@@ -11,7 +11,13 @@ public class AttributesFCompra{
     protected By btnRemoverCarrinho(){
         return By.xpath("//button[@class='btn_secondary btn_inventory']");
     }
+    protected By btnAddPraRemoverCarrinho(){
+        return By.xpath("//button[@class='btn_secondary btn_inventory']");
+    }
     protected By iconCarrinho(){
         return By.xpath("//div[@id='shopping_cart_container']");
     }
+    protected By iconCarrinhoNumProdutos(){
+        return By.xpath("span[@class='fa-layers-counter shopping_cart_badge']");
+    };
 }
